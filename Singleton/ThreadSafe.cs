@@ -35,7 +35,11 @@ namespace Design_Patterns.Singleton
             Console.WriteLine(count + " Instance created...");
         }
 
+        /// <summary>
+        /// The instance of thread safe class 
+        /// </summary>
         private static ThreadSafe instance = null;
+
         /// <summary>
         /// Gets the single instance.
         /// </summary>
@@ -52,6 +56,7 @@ namespace Design_Patterns.Singleton
                     {
                         if(instance == null)
                         {
+                            ////object initializations
                             instance = new ThreadSafe();
                         }
                     }

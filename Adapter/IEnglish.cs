@@ -1,20 +1,18 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file = "StaticBlockInitialization.cs" company="Bridgelabz">
+// <copyright file = "IEnglish.cs" company="Bridgelabz">
 //   Copyright © 2019 Company = "BridgeLabz"
 // </copyright>
 // <creator name= "Kaveri Tekawade"/>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Design_Patterns.Singleton
+namespace Design_Patterns.Adapter
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     /// <summary>
-    /// Static Block Initialization of Singleton Design pattern
+    /// Interface which declares method English chat
     /// </summary>
-    public sealed class StaticBlockInitialization
+    public interface IEnglish
     {
-
+        void EnglishChat();
     }
 }
