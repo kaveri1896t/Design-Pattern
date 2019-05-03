@@ -39,7 +39,7 @@ namespace Design_Patterns.Factory
         /// </returns>
         public override string ToString()
         {
-            return "RAM = "+this.getRAM()+", HDD = "+this.getHDD()+", CPU = "+this.getCPU();
+            return "RAM = " + this.getRAM() + ", HDD = " + this.getHDD() + ", CPU = " + this.getCPU();
         }
     }
 }

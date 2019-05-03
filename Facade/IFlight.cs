@@ -1,21 +1,22 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file = "IKorean.cs" company="Bridgelabz">
+// <copyright file = "IFlight.cs" company="Bridgelabz">
 //   Copyright © 2019 Company = "BridgeLabz"
 // </copyright>
 // <creator name= "Kaveri Tekawade"/>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Design_Patterns.Adapter
+namespace Design_Patterns.Facade
 {
     using System;
 
     /// <summary>
-    /// Interface that declares method for korean chat
+    /// Interface flight to book ticket of flight
     /// </summary>
-    public interface IKorean
+    public interface IFlight
     {
         /// <summary>
-        /// Korean language chat.
+        /// Books the flight ticket.
         /// </summary>
-        void KoreanChat();
+        /// <param name="numberOfSeats">The number of seats.</param>
+        void BookFlightTicket(int numberOfSeats);
     }
 }

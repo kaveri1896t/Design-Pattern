@@ -30,7 +30,7 @@ namespace Design_Patterns.Factory
         private string cpu;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PersonalComputer"/> class.
+        /// Initializes a new instance of the <see cref="Laptop"/> class.
         /// </summary>
         /// <param name="ram">The ram of the Server.</param>
         /// <param name="hdd">The HDD of the Server.</param>

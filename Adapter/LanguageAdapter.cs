@@ -50,6 +50,11 @@ namespace Design_Patterns.Adapter
             }
         }
 
+        /// <summary>
+        /// Converts from Korean to english.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <returns>Translated string in English</returns>
         public string ConvertToEnglish(string message)
         {
             if (message == "Annyeonghaseyo")

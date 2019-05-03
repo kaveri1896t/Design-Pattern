@@ -16,8 +16,11 @@ namespace Design_Patterns.Factory
         /// <summary>
         /// The computer type choosen by user
         /// </summary>
-        internal string ComputerType;
+        private string ComputerType;
 
+        /// <summary>
+        /// Gets the computer configuration.
+        /// </summary>
         public void GetComputerConfiguration()
         {
             char answer;
@@ -34,17 +37,17 @@ namespace Design_Patterns.Factory
                     switch (this.ComputerType)
                     {
                         case "PC":
-                            Computer pc = Factory.getComputer(ComputerType, "2 GB", "500 GB", "2.4 GHz");
+                            Computer pc = Factory.getComputer(this.ComputerType, "2 GB", "500 GB", "2.4 GHz");
                             Console.WriteLine("Configuration of Personal Computer is :\n" + pc);
                             break;
 
                         case "Laptop":
-                            Computer laptop = Factory.getComputer(ComputerType, "12 GB", "200 GB", "2.1 GHz");
+                            Computer laptop = Factory.getComputer(this.ComputerType, "12 GB", "200 GB", "2.1 GHz");
                             Console.WriteLine("Configuration of Laptop is :\n" + laptop);
                             break;
 
                         case "Server":
-                            Computer server = Factory.getComputer(ComputerType, "16 GB", "1 TB", "2.9 GHz");
+                            Computer server = Factory.getComputer(this.ComputerType, "16 GB", "1 TB", "2.9 GHz");
                             Console.WriteLine("Configuration of Serer is :\n" + server);
                             break;
 

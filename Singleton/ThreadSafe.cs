@@ -18,15 +18,15 @@ namespace Design_Patterns.Singleton
         /// <summary>
         /// The count is to count number of instance created
         /// </summary>
-        static int count = 0;
+        private static int count = 0;
 
         /// <summary>
         /// The single instance is an instance of the thread safe singleton class
         /// </summary>
-        private static readonly object singleInstance = new object();
+        private static object singleInstance = new object();
 
         /// <summary>
-        /// Prevents a default instance of the <see cref="LazyInitialization"/> class from being created.
+        /// Prevents a default instance of the <see cref="ThreadSafe"/> class from being created.
         /// </summary>
         private ThreadSafe()
         {
@@ -50,11 +50,11 @@ namespace Design_Patterns.Singleton
         {
             get
             {
-                if(instance == null)
+                if (instance == null)
                 {
                     lock (instance)
                     {
-                        if(instance == null)
+                        if (instance == null)
                         {
                             ////object initializations
                             instance = new ThreadSafe();
@@ -67,9 +67,9 @@ namespace Design_Patterns.Singleton
         }
 
         /// <summary>
-        /// Print the string.
+        /// Displays the specified string1.
         /// </summary>
-        /// <param name="message">The message.</param>
+        /// <param name="string1">The string1.</param>
         public void Display(string string1)
         {
             Console.WriteLine(string1);

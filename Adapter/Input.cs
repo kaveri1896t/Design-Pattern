@@ -21,35 +21,42 @@ namespace Design_Patterns.Adapter
             int choice;
             char answer;
             LanguageAdapter languageAdapter = new LanguageAdapter();
-            do
+            try
             {
-                Console.WriteLine("***************************");
-                Console.WriteLine("1. Korean To English");
-                Console.WriteLine("2. English To Korean");
-                choice = Convert.ToInt32(Console.ReadLine());
-                switch (choice)
+                ////Take choice from user
+                do
                 {
-                    case 1:
-                        Korean korean = new Korean();
-                        korean.KoreanChat();
-                        break;
+                    Console.WriteLine("***************************");
+                    Console.WriteLine("1. Korean To English");
+                    Console.WriteLine("2. English To Korean");
+                    choice = Convert.ToInt32(Console.ReadLine());
+                    switch (choice)
+                    {
+                        case 1:
+                            Korean korean = new Korean();
+                            korean.KoreanChat();
+                            break;
 
-                    case 2:
-                        English english = new English();
-                        english.EnglishChat();
-                        break;
+                        case 2:
+                            English english = new English();
+                            english.EnglishChat();
+                            break;
 
-                    default:
-                        break;
+                        default:
+                            break;
+                    }
+
+                    Console.WriteLine("*********************************************");
+                    Console.WriteLine("\nDo you want to continue? (y/n) : ");
+                    answer = Convert.ToChar(Console.ReadLine());
                 }
-
-                Console.WriteLine("*********************************************");
-                Console.WriteLine("\nDo you want to continue? (y/n) : ");
-                answer = Convert.ToChar(Console.ReadLine());
+                while (answer == 'y' || answer == 'Y');
+                Console.WriteLine("\nThank you....");
             }
-            while (answer == 'y' || answer == 'Y');
-            Console.WriteLine("\nThank you....");
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
-

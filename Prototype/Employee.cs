@@ -48,9 +48,16 @@ namespace Design_Patterns.Prototype
         /// <returns>cloned employee</returns>
         public Employee Clone(Employee employee)
         {
-            this.employeeName = employee.employeeName;
-            this.employeeId = employee.employeeId;
-            this.salary = employee.salary;
+            try
+            {
+                this.employeeName = employee.employeeName;
+                this.employeeId = employee.employeeId;
+                this.salary = employee.salary;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             return this;
         }

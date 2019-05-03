@@ -13,6 +13,9 @@ namespace Design_Patterns.Adapter
     /// </summary>
     public interface IEnglish
     {
+        /// <summary>
+        /// English language chat.
+        /// </summary>
         void EnglishChat();
     }
 }

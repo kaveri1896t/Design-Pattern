@@ -1,21 +1,21 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file = "IKorean.cs" company="Bridgelabz">
+// <copyright file = "PasswordUpdation.cs" company="Bridgelabz">
 //   Copyright © 2019 Company = "BridgeLabz"
 // </copyright>
 // <creator name= "Kaveri Tekawade"/>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Design_Patterns.Adapter
+namespace Design_Patterns.Proxy
 {
     using System;
 
     /// <summary>
-    /// Interface that declares method for korean chat
+    /// Password update
     /// </summary>
-    public interface IKorean
+    public interface PasswordUpdation
     {
         /// <summary>
-        /// Korean language chat.
+        /// Updates the password.
         /// </summary>
-        void KoreanChat();
+        void UpdatePassword();
     }
 }

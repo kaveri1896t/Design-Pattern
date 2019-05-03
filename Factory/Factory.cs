@@ -11,7 +11,7 @@ namespace Design_Patterns.Factory
     using System.Text;
 
     /// <summary>
-    /// Factory is an Abstract class which defines methos to get properties of types of computers
+    /// Factory is an Abstract class which defines methods to get properties of types of computers
     /// </summary>
     public abstract class Factory
     {
@@ -22,8 +22,8 @@ namespace Design_Patterns.Factory
         /// <param name="ram">The ram of computer.</param>
         /// <param name="hdd">The HDD computer.</param>
         /// <param name="cpu">The cpu computer.</param>
-        /// <returns></returns>
-        public static Computer getComputer(String type, String ram, String hdd, String cpu)
+        /// <returns>Computer instance</returns>
+        public static Computer getComputer(string type, string ram, string hdd, string cpu)
         {
             if ("PC".Equals(type) || "pc".Equals(type))
             {

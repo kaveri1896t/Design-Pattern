@@ -18,12 +18,12 @@ namespace Design_Patterns.Singleton
         /// <summary>
         /// The count is to count number of instance created
         /// </summary>
-        static int count = 0;
+        private static int count = 0;
 
         /// <summary>
         /// The single instance is an instance of the Eager initialization 
         /// </summary>
-        private static readonly EagerInitialization singleInstance = new EagerInitialization();
+        private static EagerInitialization singleInstance = new EagerInitialization();
 
         /// <summary>
         /// Prevents a default instance of the <see cref="EagerInitialization"/> class from being created.

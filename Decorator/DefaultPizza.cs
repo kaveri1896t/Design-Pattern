@@ -1,21 +1,24 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file = "IKorean.cs" company="Bridgelabz">
+// <copyright file = "DefaultPizza.cs" company="Bridgelabz">
 //   Copyright © 2019 Company = "BridgeLabz"
 // </copyright>
 // <creator name= "Kaveri Tekawade"/>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Design_Patterns.Adapter
+namespace Design_Patterns.Decorator
 {
     using System;
 
     /// <summary>
-    /// Interface that declares method for korean chat
+    /// General pizza  
     /// </summary>
-    public interface IKorean
+    public class DefaultPizza : IPizza
     {
         /// <summary>
-        /// Korean language chat.
+        /// override the Methods make pizza.
         /// </summary>
-        void KoreanChat();
+        public void MakePizza()
+        {
+            Console.WriteLine("\nBasic Pizza");
+        }
     }
 }

@@ -17,26 +17,28 @@ namespace Design_Patterns.Singleton
         /// <summary>
         /// The count is to count number of instance created
         /// </summary>
-        static int count = 0;
+        private static int count = 0;
 
         /// <summary>
         /// The single instance is an instance of using reflection class
         /// </summary>
-        public static readonly UsingReflection singleInstance = new UsingReflection();
+        private static UsingReflection singleInstance = new UsingReflection();
 
+        /// <summary>
+        /// Prevents a default instance of the <see cref="UsingReflection"/> class from being created.
+        /// </summary>
         private UsingReflection()
         {
             ////Increment the count after object creaation
             count++;
             Console.WriteLine(count + " Instance created...");
         }
-
     }
-
+    
     /// <summary>
     /// Reflection to break singleton pattern
     /// </summary>
-    public class ReflectionTest
+    public sealed class ReflectionTest
     {
         /// <summary>
         /// Tests the reflection.
@@ -52,10 +54,5 @@ namespace Design_Patterns.Singleton
             }
             */
         }
-
-        private class Constructor
-        {
-        }
     }
 }
-

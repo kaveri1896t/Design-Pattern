@@ -18,12 +18,12 @@ namespace Design_Patterns.Singleton
         /// <summary>
         /// The count is to count number of instance created
         /// </summary>
-        static int count = 0;
+        private static int count = 0;
 
         /// <summary>
-        /// The single instance is an instance of the Lazy initialization with deligation
+        /// The single instance is an instance of the Lazy initialization with delegation
         /// </summary>
-        private static readonly Lazy<LazyInitialization> singleInstance = new Lazy<LazyInitialization>(() => new LazyInitialization());
+        private static Lazy<LazyInitialization> singleInstance = new Lazy<LazyInitialization>(() => new LazyInitialization());
 
         /// <summary>
         /// Prevents a default instance of the <see cref="LazyInitialization"/> class from being created.
@@ -50,9 +50,9 @@ namespace Design_Patterns.Singleton
         }
 
         /// <summary>
-        /// Print the string.
+        /// Displays the specified string1.
         /// </summary>
-        /// <param name="message">The message.</param>
+        /// <param name="string1">The string1.</param>
         public void Display(string string1)
         {
             Console.WriteLine(string1);

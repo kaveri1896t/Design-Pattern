@@ -42,10 +42,7 @@ namespace Design_Patterns.Singleton
             try
             {
                 ////pass the functions to delegate 
-                Parallel.Invoke(
-                    () => PrintObject1(),
-                    () => PrintObject2()
-                    );
+                Parallel.Invoke(() => PrintObject1(), () => PrintObject2());
             }
             catch (Exception e)
             {
@@ -61,10 +58,7 @@ namespace Design_Patterns.Singleton
             try
             {
                 ////pass the functions to delegate 
-                Parallel.Invoke(
-                    () => PrintObject1(),
-                    () => PrintObject2()
-                    );
+                Parallel.Invoke(() => PrintObject1(), () => PrintObject2());
             }
             catch (Exception e)
             {
@@ -77,8 +71,16 @@ namespace Design_Patterns.Singleton
         /// </summary>
         private static void PrintObject1()
         {
-            LazyInitialization lazyInitialization = LazyInitialization.SingleInstance;
-            lazyInitialization.Display("Object1");
+            try
+            {
+                ////display object 1
+                LazyInitialization lazyInitialization = LazyInitialization.SingleInstance;
+                lazyInitialization.Display("Object1");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         /// <summary>
@@ -86,8 +88,16 @@ namespace Design_Patterns.Singleton
         /// </summary>
         private static void PrintObject2()
         {
-            LazyInitialization lazyInitialization = LazyInitialization.SingleInstance;
-            lazyInitialization.Display("Object2");
+            try
+            {
+                ////display object 2
+                LazyInitialization lazyInitialization = LazyInitialization.SingleInstance;
+                lazyInitialization.Display("Object2");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

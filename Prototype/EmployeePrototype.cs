@@ -11,23 +11,31 @@ namespace Design_Patterns.Prototype
     /// <summary>
     /// Employee prototype to create clone of Employee
     /// </summary>
-    public class EmployeePrototype 
+    public class EmployeePrototype
     {
         /// <summary>
         /// Tests the prototype design pattern.
         /// </summary>
         public void TestPrototype()
         {
-            Employee employee = new Employee("Kaveri","A1", 10000.00);
+            try
+            {
+                Employee employee = new Employee("Kaveri", "A1", 10000.00);
 
-            ////Copy the existing object into new empty object
-            Employee employee1 = employee.Clone(employee);
-            
-            ////Display the objects
-            Console.WriteLine("Original Instance : \n");
-            Console.WriteLine(employee.ToString());
-            Console.WriteLine("\nCloned Instance : \n");
-            Console.WriteLine(employee1.ToString());
+                ////Copy the existing object into new empty object
+                Employee employee1 = employee.Clone(employee);
+
+                ////Display the objects
+                Console.WriteLine("Original Instance : \n");
+                Console.WriteLine(employee.ToString());
+                Console.WriteLine("\nCloned Instance : \n");
+                Console.WriteLine(employee1.ToString());
+                return;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

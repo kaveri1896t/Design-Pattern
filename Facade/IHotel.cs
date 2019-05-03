@@ -1,21 +1,22 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file = "IKorean.cs" company="Bridgelabz">
+// <copyright file = "IHotel.cs" company="Bridgelabz">
 //   Copyright © 2019 Company = "BridgeLabz"
 // </copyright>
 // <creator name= "Kaveri Tekawade"/>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Design_Patterns.Adapter
+namespace Design_Patterns.Facade
 {
     using System;
 
     /// <summary>
-    /// Interface that declares method for korean chat
+    /// Interface hotel to book hotel
     /// </summary>
-    public interface IKorean
+    public interface IHotel
     {
         /// <summary>
-        /// Korean language chat.
+        /// Books the hotel.
         /// </summary>
-        void KoreanChat();
+        /// <param name="number">The number of rooms.</param>
+        void BookHotel(int number);
     }
 }
