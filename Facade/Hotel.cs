@@ -34,6 +34,7 @@ namespace Design_Patterns.Facade
                 ////Check room availability
                 if (this.IsAvailable(numberOfRooms))
                 {
+                    ////if available then book the rooms 
                     this.BookedRoomCount = this.BookedRoomCount + numberOfRooms;
                     this.HotelCapacity = this.HotelCapacity - this.BookedRoomCount;
                     Console.WriteLine("\nRooms booked successfully....");

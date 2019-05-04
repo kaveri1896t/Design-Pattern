@@ -25,6 +25,7 @@ namespace Design_Patterns.Factory
         /// <returns>Computer instance</returns>
         public static Computer getComputer(string type, string ram, string hdd, string cpu)
         {
+            ////Check the type of computer and add specification according to that type
             if ("PC".Equals(type) || "pc".Equals(type))
             {
                 return new PersonalComputer(ram, hdd, cpu);

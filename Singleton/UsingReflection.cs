@@ -34,25 +34,4 @@ namespace Design_Patterns.Singleton
             Console.WriteLine(count + " Instance created...");
         }
     }
-    
-    /// <summary>
-    /// Reflection to break singleton pattern
-    /// </summary>
-    public sealed class ReflectionTest
-    {
-        /// <summary>
-        /// Tests the reflection.
-        /// </summary>
-        public static void TestReflection()
-        {
-            /*
-            Type myType = typeof(UsingReflection);
-            Constructor[] constructors = myType.GetConstructor();
-            foreach (Constructor info in constructors)
-            {
-                Console.WriteLine("Instance.hashCode():- " + info.GetHashCode());
-            }
-            */
-        }
-    }
 }

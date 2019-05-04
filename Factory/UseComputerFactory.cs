@@ -19,7 +19,7 @@ namespace Design_Patterns.Factory
         private string ComputerType;
 
         /// <summary>
-        /// Gets the computer configuration.
+        /// Gets the computer configuration according to type.
         /// </summary>
         public void GetComputerConfiguration()
         {
@@ -37,17 +37,20 @@ namespace Design_Patterns.Factory
                     switch (this.ComputerType)
                     {
                         case "PC":
+                            ////Pc configuration
                             Computer pc = Factory.getComputer(this.ComputerType, "2 GB", "500 GB", "2.4 GHz");
                             Console.WriteLine("Configuration of Personal Computer is :\n" + pc);
                             break;
 
                         case "Laptop":
+                            ////Laptop configuration
                             Computer laptop = Factory.getComputer(this.ComputerType, "12 GB", "200 GB", "2.1 GHz");
                             Console.WriteLine("Configuration of Laptop is :\n" + laptop);
                             break;
 
                         case "Server":
-                            Computer server = Factory.getComputer(this.ComputerType, "16 GB", "1 TB", "2.9 GHz");
+                            ////Server Configuration
+                            Computer server = Factory.getComputer(this.ComputerType, "16 GB", "12 TB", "2.9 GHz");
                             Console.WriteLine("Configuration of Serer is :\n" + server);
                             break;
 

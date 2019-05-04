@@ -42,8 +42,14 @@ namespace Design_Patterns.Proxy
         /// </value>
         public string UserId
         {
-            get { return this.userId; }
-            set { this.userId = value; }
+            get
+            {
+                return this.userId;
+            }
+            set
+            {
+                this.userId = value;
+            }
         }
 
         /// <summary>

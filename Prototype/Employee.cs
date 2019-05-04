@@ -50,6 +50,7 @@ namespace Design_Patterns.Prototype
         {
             try
             {
+                ////Copy all members of existing object into another object
                 this.employeeName = employee.employeeName;
                 this.employeeId = employee.employeeId;
                 this.salary = employee.salary;

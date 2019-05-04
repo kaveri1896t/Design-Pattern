@@ -25,16 +25,21 @@ namespace Design_Patterns
             {
                 do
                 {
+                    ////Operations to be choosen by user
                     Console.WriteLine("1.Singleton Design Pattern");
                     Console.WriteLine("2.Factory Design Pattern");
                     Console.WriteLine("3.Prototype Design Pattern");
                     Console.WriteLine("4.Adapter Design Pattern");
                     Console.WriteLine("5.Proxy Design Pattern");
                     Console.WriteLine("6.Facade Design Pattern");
+                    Console.WriteLine("7.Decorator Design Pattern");
+                    Console.WriteLine("8.Observer Design Pattern");
+                    Console.WriteLine("9.Visitor Design Pattern");
                     choice = Convert.ToInt32(Console.ReadLine());
                     switch (choice)
                     {
                         case 1:
+                            ////Singleton 
                             {
                                 Console.ForegroundColor = ConsoleColor.White;
                                 try
@@ -45,6 +50,7 @@ namespace Design_Patterns
                                         Console.WriteLine("1.Eager Initialization");
                                         Console.WriteLine("2.Lazy Initialization");
                                         Console.WriteLine("3.Thread Safe");
+                                        Console.WriteLine("4.Reflection");
                                         choice1 = Convert.ToInt32(Console.ReadLine());
                                         switch (choice1)
                                         {
@@ -61,6 +67,11 @@ namespace Design_Patterns
                                             case 3:
                                                 Console.WriteLine("\n******Thread Safe******");
                                                 Singleton.SingletonTest.TestThreadSafe();
+                                                break;
+
+                                            case 4:
+                                                Console.WriteLine("\n******Reflection******");
+                                                Singleton.ReflectionTest.TestReflection();
                                                 break;
 
                                             default:
@@ -82,6 +93,7 @@ namespace Design_Patterns
                             break;
 
                         case 2:
+                            ////Factory
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("*******Factory Design Pattern******");
                             Factory.UseComputerFactory factory = new Factory.UseComputerFactory();
@@ -89,6 +101,7 @@ namespace Design_Patterns
                             break;
 
                         case 3:
+                            ////Prototype
                             Console.ForegroundColor = ConsoleColor.DarkCyan;
                             Console.WriteLine("\n******Prototype Design Pattern******");
                             Prototype.EmployeePrototype employee = new Prototype.EmployeePrototype();
@@ -96,6 +109,7 @@ namespace Design_Patterns
                             break;
 
                         case 4:
+                            ////Adapter
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
                             Console.WriteLine("\n******Adapter Design Pattern******");
                             Adapter.Input input = new Adapter.Input();
@@ -103,6 +117,7 @@ namespace Design_Patterns
                             break;
 
                         case 5:
+                            ////Proxy
                             Console.ForegroundColor = ConsoleColor.Magenta;
                             Console.WriteLine("\n******Proxy Design Pattern******");
                             Proxy.Proxy proxy = new Proxy.Proxy();
@@ -110,14 +125,39 @@ namespace Design_Patterns
                             break;
 
                         case 6:
+                            ////Facade
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("\n******Facade Design Pattern******");
                             Facade.TravelPackage travelPackage = new Facade.TravelPackage();
                             travelPackage.StartTravel();
                             break;
 
+                        case 7:
+                            ////Decorator
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            Console.WriteLine("\n******Decorator Design Pattern******");
+                            Decorator.OrderPizza orderPizza = new Decorator.OrderPizza();
+                            orderPizza.Order();
+                            break;
+
+                        case 8:
+                            ////Observer
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("\n******Observer Design Pattern******");
+                            Observer.MakeChanges makeChanges = new Observer.MakeChanges();
+                            makeChanges.Changes();
+                            break;
+
+                        case 9:
+                            ////Visitor
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("\n******Visitor Design Pattern******");
+                            Visitor.Visit visit = new Visitor.Visit();
+                            visit.StartVisiting();
+                            break;
+
                         default:
-                            Console.WriteLine("\nChoice is Case Sensitive...\nExiting from Choice...");
+                            Console.WriteLine("\nWrong choice...");
                             break;
                     }
 

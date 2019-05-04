@@ -20,6 +20,8 @@ namespace Design_Patterns.Adapter
         {
             int choice;
             char answer;
+
+            ////Adapter instance to access members of that class
             LanguageAdapter languageAdapter = new LanguageAdapter();
             try
             {
@@ -61,6 +63,7 @@ namespace Design_Patterns.Adapter
                             break;
 
                         case 6:
+                            ////Bye
                             Console.WriteLine(languageAdapter.ConvertToEnglish("Annyeong"));
                             break;
 

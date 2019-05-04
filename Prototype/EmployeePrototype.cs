@@ -20,9 +20,10 @@ namespace Design_Patterns.Prototype
         {
             try
             {
+                ////Create one employee having id, name, salary
                 Employee employee = new Employee("Kaveri", "A1", 10000.00);
 
-                ////Copy the existing object into new empty object
+                ////Copy the existing object into new object
                 Employee employee1 = employee.Clone(employee);
 
                 ////Display the objects

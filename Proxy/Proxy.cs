@@ -73,6 +73,7 @@ namespace Design_Patterns.Proxy
                 ////Check for admin
                 if (this.IsAdmin(userid))
                 {
+                    ////If admin then allow to update password
                     this.passwordObject.UpdatePassword();
                     return;
                 }
@@ -110,10 +111,12 @@ namespace Design_Patterns.Proxy
                     switch (choice)
                     {
                         case 1:
+                            ////Show details
                             this.ViewDetails(inputName);
                             break;
 
                         case 2:
+                            ////Allow to authorised user
                             this.UpdatePassword(inputName);
                             break;
 

@@ -29,6 +29,8 @@ namespace Design_Patterns.Facade
             try
             {
                 Console.WriteLine("\n--(>_-)-- GOA TRIP BOOKING --(-_<)--");
+
+                ////Show details to the visitor
                 this.ShowDetails();
                 Console.WriteLine("\nWould you like to go on a trip with us : (y/n)");
                 choice = Convert.ToChar(Console.ReadLine());
@@ -36,6 +38,8 @@ namespace Design_Patterns.Facade
                 {
                     Console.WriteLine("\nEnter your name : ");
                     name = Console.ReadLine();
+
+                    ////number of members should be 10 or less
                     while (flag)
                     {
                         Console.WriteLine("\nEnter number of members (Maximum 10): ");
@@ -51,12 +55,15 @@ namespace Design_Patterns.Facade
 
                             ////Hotel object
                             Hotel hotel = new Hotel();
+
+                            ////if number of members between 5-10 then should book 2 rooms 
                             if (this.NumberOfMembers > 5 && this.NumberOfMembers <= 10)
                             {
-                                ////Book hotel rooms for specified number of people
+                                ////Book specified hotel rooms for number of people
                                 hotel.BookHotel(2);
                             }
 
+                            //// 1 room for max 5 members
                             if (this.NumberOfMembers > 0 && this.NumberOfMembers <= 5)
                             {
                                 hotel.BookHotel(1);

@@ -9,7 +9,7 @@ namespace Design_Patterns.Adapter
     using System;
 
     /// <summary>
-    /// Input from user
+    /// takes Input from user
     /// </summary>
     public class Input
     {
@@ -20,6 +20,8 @@ namespace Design_Patterns.Adapter
         {
             int choice;
             char answer;
+
+            ////Adapter instance to access members of that class
             LanguageAdapter languageAdapter = new LanguageAdapter();
             try
             {
@@ -33,11 +35,13 @@ namespace Design_Patterns.Adapter
                     switch (choice)
                     {
                         case 1:
+                            ////Korean to English
                             Korean korean = new Korean();
                             korean.KoreanChat();
                             break;
 
                         case 2:
+                            ////English to Korean
                             English english = new English();
                             english.EnglishChat();
                             break;

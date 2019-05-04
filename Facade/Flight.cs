@@ -31,9 +31,13 @@ namespace Design_Patterns.Facade
         {
             try
             {
+                ////Check whether specified seats are available or not
                 if (this.IsAvailable(numberOfSeats))
                 {
+                    ////if available then book specified number of tickets
                     this.BookedTicketCount = this.BookedTicketCount + numberOfSeats;
+
+                    ////update the capacity of flight 
                     this.FlightCapacity = this.FlightCapacity - this.BookedTicketCount;
                     Console.WriteLine("\nTickets booked successfully....");
                     return;

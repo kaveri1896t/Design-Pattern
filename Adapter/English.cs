@@ -33,6 +33,8 @@ namespace Design_Patterns.Adapter
                     Console.WriteLine("5. I am fine");
                     Console.WriteLine("6. Bye");
                     choice = Convert.ToInt32(Console.ReadLine());
+
+                    ////Calls to convert to korean based on Phrase
                     switch (choice)
                     {
                         case 1:
